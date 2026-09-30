@@ -1,0 +1,317 @@
+/* Dapur Tyas by Techno Garage - Modern Green & Fresh Theme */
+:root {
+  --bg-primary: #F4F5F0;       /* Putih Tulang hint hijau */
+  --bg-card: #FFFFFF;
+  --bg-subtle: #EAECE4;
+  --text-main: #1A2B22;        /* Hijau Lumut Gelap */
+  --text-muted: #5C6E63;
+  --primary: #748C69;          /* Hijau Sage */
+  --primary-hover: #5F7455;
+  --primary-light: #E5EBE1;
+  --accent: #D9A05B;           /* Kuning Kunyit / Mustard */
+  --accent-hover: #C58C47;
+  --accent-light: #FBF4EA;
+  --danger: #D9534F;
+  --danger-light: #FDF2F2;
+  --success: #3E8E41;
+  --info: #31708F;
+  --border-color: #E2E5DC;
+  --shadow-xs: 0 1px 4px rgba(26, 43, 34, 0.05);
+  --shadow-sm: 0 2px 8px rgba(26, 43, 34, 0.06);
+  --shadow-md: 0 6px 20px rgba(26, 43, 34, 0.08);
+  --shadow-lg: 0 12px 32px rgba(26, 43, 34, 0.12);
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+  --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  line-height: 1.5;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Glassmorphism & Navbar */
+.navbar-custom {
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
+  z-index: 1000;
+  box-shadow: var(--shadow-sm);
+}
+
+.brand-badge {
+  background: var(--primary-light);
+  color: var(--primary-hover);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+
+.btn-primary-custom {
+  background-color: var(--primary);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 8px 16px;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-primary-custom:hover, .btn-primary-custom:focus {
+  background-color: var(--primary-hover);
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(116, 140, 105, 0.35);
+}
+
+.btn-accent-custom {
+  background-color: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 8px 16px;
+  transition: all 0.2s ease;
+}
+
+.btn-accent-custom:hover {
+  background-color: var(--accent-hover);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.btn-outline-custom {
+  background: transparent;
+  border: 1.5px solid var(--primary);
+  color: var(--primary);
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  padding: 7px 14px;
+  transition: all 0.2s ease;
+}
+
+.btn-outline-custom:hover, .btn-outline-custom.active {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* Card Styling */
+.card-custom {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+}
+
+.card-custom:hover {
+  box-shadow: var(--shadow-md);
+}
+
+/* Menu Item Card */
+.menu-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.menu-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 175px;
+  overflow: hidden;
+  background-color: var(--bg-subtle);
+}
+
+.menu-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.menu-card:hover .menu-img-wrap img {
+  transform: scale(1.04);
+}
+
+.category-tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(26, 43, 34, 0.85);
+  backdrop-filter: blur(4px);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+}
+
+.menu-info {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.menu-title {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.menu-desc {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+  flex-grow: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.menu-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  gap: 8px;
+}
+
+.menu-price {
+  font-size: 1.02rem;
+  font-weight: 800;
+  color: var(--primary);
+  white-space: nowrap;
+}
+
+/* Cart Float Button for Mobile */
+.floating-cart-bar {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 24px);
+  max-width: 480px;
+  background: var(--text-main);
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: var(--radius-full);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1050;
+  animation: slideUp 0.3s ease-out;
+  cursor: pointer;
+}
+
+@keyframes slideUp {
+  from { transform: translate(-50%, 60px); opacity: 0; }
+  to { transform: translate(-50%, 0); opacity: 1; }
+}
+
+/* Badges Status Order */
+.status-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.status-menunggu_kasir {
+  background: #FFF4E5;
+  color: #B76E00;
+}
+
+.status-dimasak_dapur {
+  background: #E8F4FD;
+  color: #0D6EFD;
+}
+
+.status-siap_saji {
+  background: #EAF8EF;
+  color: #2E7D32;
+}
+
+.status-selesai {
+  background: #EAECE4;
+  color: #5C6E63;
+}
+
+.status-batal {
+  background: #FEECEB;
+  color: #D32F2F;
+}
+
+/* Modal and Drawers */
+.table-badge {
+  background: var(--accent-light);
+  color: var(--accent-hover);
+  border: 1px solid var(--accent);
+  font-weight: 700;
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 10px;
+}
+
+/* Responsif Mobile Khusus Layar HP (<= 576px) */
+@media (max-width: 576px) {
+  .menu-img-wrap {
+    height: 140px;
+  }
+  .menu-title {
+    font-size: 0.92rem;
+  }
+  .menu-desc {
+    font-size: 0.74rem;
+  }
+  .menu-price {
+    font-size: 0.95rem;
+  }
+  .table-badge {
+    font-size: 0.75rem;
+    padding: 3px 8px;
+  }
+}
